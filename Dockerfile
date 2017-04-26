@@ -7,7 +7,7 @@ RUN yum makecache fast && \
   rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7 && \
   curl -s https://packagecloud.io/install/repositories/rocknsm/2/script.rpm.sh | sudo bash && \
   yum makecache fast && \
-  yum install bro wireshark tcpdump vim git GeoIP-update GeoIP GeoIP-update-devel -y && \
+  yum install bro wireshark tcpdump vim git GeoIP-update GeoIP GeoIP-update-devel file tcpreplay nano -y && \
   curl -L https://raw.githubusercontent.com/rocknsm/rock/master/playbooks/files/profile.d-bro.sh -o /etc/profile.d/bro.sh && \
   useradd -r -m -d /home/student -s /bin/bash -c "Student Account" student && \
   echo 'student	ALL=(ALL)	NOPASSWD: ALL' >> /etc/sudoers && \
